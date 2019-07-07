@@ -569,6 +569,8 @@ main(int argc, char **argv)
 					"ZNY : BitZeny : Z\n"
 					"ZOOM : Zoom coin : i\n"
 					"ZRC : Ziftrcoin : Z\n"
+					"BRO : Brocoin : Z\n"
+					"JUMP : Jumpcoin : Z\n"
 					);
 					return 1;
 			}
@@ -1574,6 +1576,22 @@ main(int argc, char **argv)
 					addrtype = 111;
 					privtype = 239;
 					break;
+			}
+			else
+			if (strcmp(optarg, "BRO") == 0) {
+				fprintf(stderr,
+					"Generating BRO Address\n");
+				addrtype = 26;
+				privtype = 128;
+				break;
+			}
+			else
+			if (strcmp(optarg, "JUMP") == 0) {
+				fprintf(stderr,
+					"Generating JUMP Address\n");
+				addrtype = 43;
+				privtype = 171;
+				break;
 			}
 			break;
 
