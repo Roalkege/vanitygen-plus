@@ -569,8 +569,9 @@ main(int argc, char **argv)
 					"ZNY : BitZeny : Z\n"
 					"ZOOM : Zoom coin : i\n"
 					"ZRC : Ziftrcoin : Z\n"
-					"BRO : Brocoin : Z\n"
-					"JUMP : Jumpcoin : Z\n"
+					"BRO : Brocoin : B\n"
+					"JUMP : Jumpcoin : J\n"
+					"GLT : GlobalToken : G\n"
 					);
 					return 1;
 			}
@@ -1591,6 +1592,14 @@ main(int argc, char **argv)
 					"Generating JUMP Address\n");
 				addrtype = 43;
 				privtype = 171;
+				break;
+			}
+			else
+			if (strcmp(optarg, "GLT") == 0) {
+				fprintf(stderr,
+					"Generating GLT Address\n");
+				addrtype = 38;
+				privtype = 166;
 				break;
 			}
 			break;
